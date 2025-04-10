@@ -1,0 +1,14 @@
+from flask import Flask
+
+app = Flask(__name__)  # Corrected __name__
+
+@app.route('/')
+def home():
+    return "Hello, World! This is a lightweight web server."
+
+if __name__ == '__main__':  # Corrected __name__
+    app.run(host='0.0.0.0', port=8081)
+
+
+# sudo docker build -t myimage .
+# sudo docker run -p 8081:8081 myimage
